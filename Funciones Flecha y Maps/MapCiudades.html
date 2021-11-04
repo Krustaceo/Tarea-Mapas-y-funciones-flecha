@@ -1,0 +1,76 @@
+<html>
+    <body>
+        <script>
+            /*
+            3.Almacenar en un Map los nombres de ciudades como clave y la cantidad de habitantes como 
+            valores. Mostrar en una lista HTML que se debe crear en forma dinámica inmediatamente luego que
+            se carga la página.
+
+            Se debe implementar estas opciones
+
+            1. El usuario puede ver todas las ciudades y sus habitantes
+            2. El usuario puede saber cuantas ciudades existen
+            3. Borrar ciudad
+            4. Añadir ciudad y habitantes
+            5. Si el usuario solicita saber la ciudad de mas habitantes que se muestre en un color  rojo el tipo de 
+            letra
+            6. Si el usuario solicita la ciudad de menos habitantes que se muestre en color verde
+            */
+
+            class ciudades
+            {
+                constructor(nombreCiudad, habitantes)
+                {
+                    this._nombreCiudad = nombreCiudad;
+                    this._habitantes = habitantes;
+                }
+
+                get valorNombreCiudad()
+                {
+                    return this._nombreCiudad;
+                }
+
+                get valorHabitantes()
+                {
+                    return this._habitantes;
+                }
+                
+            }
+
+            function crearLista()
+            {
+            /*
+                var lista = ("Lista de Ciudades ===>"); 
+                for(let contador = 1; contador < 15; contador++)
+                {
+                    let listaCiudad = new ciudades("Jerez nº" + contador, Math.random()*100000+1000);
+                    lista = lista + ("Ciudad: " + listaCiudad[contador].valorNombreCiudad + " Habitantes: " + listaCiudad[contador].valorHabitantes);
+                }
+
+               document.write(lista);
+            */
+
+                const lista = new Array();
+
+                for(let contador = 0; contador < 15; contador++)
+                {
+                    lista[contador] = new ciudades("Jerez nº" + contador, Math.random()*100000+1000);
+                }
+
+                for(let contador = 0; contador < lista.length; contador++)
+                {
+                    document.write( " || Nombre de Ciudad: " + lista[contador].valorNombreCiudad + " -- Habitantes: " + lista[contador].valorHabitantes + " | <br>");
+                }
+            }
+
+
+            crearLista();
+
+
+
+           
+
+            
+        </script>
+    </body>
+</html>

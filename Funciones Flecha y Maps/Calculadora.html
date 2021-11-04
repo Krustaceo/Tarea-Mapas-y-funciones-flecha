@@ -1,0 +1,71 @@
+<html>
+    <body>
+
+        <input id="botonSumar" type="button" value="sumar" onclick="sumar();" />
+
+        <input id="botonRestar" type="button" value="restar" onclick="restar();" />
+
+        <input id="botonDividir" type="button" value="dividir" onclick="dividir();" />
+
+        <input id="botonMultiplicar" type="button" value="multiplicar" onclick="multiplicar();" />
+
+
+        <script>
+
+            /*
+                Crear una calculadora con funciones flecha y las operaciones básicas (+ , * , - , / ). Utilizar dos 
+                parámetros de entrada y 4 botones.
+            */
+
+ 
+
+            const sumar = resultado => 
+            {  
+                let numero1 = parseInt(prompt("Introduce un numero: "));
+
+                let numero2 = parseInt(prompt("Introduce un numero: "));
+
+               resultado = parseInt(numero1) + parseInt(numero2);
+               
+               document.write(resultado);
+                
+            }
+            
+            const restar = resultado =>
+            {
+                let numero1 = parseInt(prompt("Introduce un numero: "));
+
+                let numero2 = parseInt(prompt("Introduce un numero: "));
+
+                resultado = (parseInt(numero1) - parseInt(numero2));
+
+                document.write(resultado);
+            }
+
+            const dividir = resultado =>
+            {
+                let numero1 = parseInt(prompt("Introduce un numero: "));
+
+                let numero2 = parseInt(prompt("Introduce un numero: "));
+
+                resultado = (parseInt(numero1) / parseInt(numero2));
+                
+                document.write(resultado);
+            }
+
+            const multiplicar = resultado => 
+            {
+                let numero1 = parseInt(prompt("Introduce un numero: "));
+
+                let numero2 = parseInt(prompt("Introduce un numero: "));
+
+                resultado = (parseInt(numero1) * parseInt(numero2));
+                
+                document.write(resultado);
+            }
+
+
+
+        </script>
+    </body>
+</html>

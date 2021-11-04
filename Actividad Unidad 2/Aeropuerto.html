@@ -1,0 +1,87 @@
+<html>
+    <body>
+        <script>
+            /*
+            Diseña una clase “Aeropuerto”. Tendrá como atributos “nombre”, “ciudad” y “numeroVuelosDiarios”. 
+            Cada vuelo diario se representará como una objeto de la clase “Vuelo”. En ella se guardaran los atributos 
+            “codigo”, “hora_llegada” y “hora_salida”.
+            Implementa métodos en aeropuerto y vuelo para modificar la hora de llegada, para modificar la hora de
+            salida y para comprobar si la hora de salida es posterior a la hora de llegada.
+            */
+
+            class aeropuerto
+            {
+                constructor(nombreAeropuerto, nombreCiudad, VuelosDiarios)
+                {
+                    this._nombreAeropuerto = nombreAeropuerto;
+                    this._nombreCiudad = nombreCiudad;
+                    this._arrayVuelosDiarios = new Array();
+
+                    for(let contador = 0; contador < VuelosDiarios; contador++)
+                    {
+                        this._arrayVuelosDiarios[contador] = new vuelos(Math.random()*1000+100, parseInt(1400), parseInt(1400) + contador*50);
+                    }
+
+                }
+
+                get getArrayVuelos()
+                {
+                    return this._arrayVuelosDiarios;
+                }
+            }
+
+            class vuelos
+            {
+                constructor(codigo, hora_llegada, hora_salida)
+                {
+                    this._codigo = codigo;
+                    this._hora_llegada = hora_llegada;
+                    this._hora_salida = hora_salida
+                }
+
+                get getLlegada()
+                {
+                    return this._hora_llegada;
+                }
+                get getSalida()
+                {
+                    return this._hora_salida;
+                }
+
+                set setLlegada(llegada)
+                {
+                    this._hora_llegada = llegada;
+                }
+                set setSalida(salida)
+                {
+                    this._hora_salida = salida;
+                }
+            }
+
+            /*
+             Implementa métodos en aeropuerto y vuelo para modificar la hora de llegada, para modificar la hora de
+            salida y para comprobar si la hora de salida es posterior a la hora de llegada.
+            */
+
+            function main()
+            {
+                // Creo un aeropuerto
+                var jerezAP = new aeropuerto("PatataPuerto", "Jerez de la Frontera", 5);
+                
+                if(jerezAP.getArrayVuelos[1].getLlegada < jerezAP.getArrayVuelos[1].getSalida)
+                {
+                    document.write("La hora de salida es posterior a la hora de llegada <br>");
+                }
+                
+                document.write(jerezAP.getArrayVuelos[2].getSalida);
+
+                document.write(jerezAP.getArrayVuelos[2].setSalida(1500));
+                document.write(" Hora de salida");
+
+                
+            }
+
+            main();
+        </script>
+    </body>
+</html>

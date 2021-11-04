@@ -1,0 +1,62 @@
+<html>
+    <body>
+        <script>
+            /*
+            Diseña una clase “Hospital”. Tendrá como atributos “nombre”, “ciudad” y “numPacientes” (número de pacientes ingresados). 
+            Cada paciente se representará como un objeto de la clase “Paciente”. En ella se guardaran los atributos “DNI”, “nombre”, 
+            “enfermedad”.
+            Implementa un método en “Hospital” que reciba el código de paciente y se le de alta a dicho paciente (equivale a eliminar
+             al paciente).
+            */
+
+            class hospital
+            {
+                constructor(nombreHospital, ciudad, numPacientes)
+                {
+                    this._nombreHospital = nombreHospital;
+                    this._ciudad = ciudad;
+                    this._ArrayPacientes = new Array();
+
+                    for(let contador = 0; contador < numPacientes; contador++)
+                    {
+                        this._ArrayPacientes[contador] = new paciente(contador + " A", "Jose nº" + contador, "Psicopata");
+                    }
+                }
+
+
+                get GetArrayPacientes()
+                {
+                    return this._ArrayPacientes;
+                }
+
+            }
+            class paciente
+            {
+                constructor(dni, nombrePaciente, enfermedad)
+                {
+                    this._dni = dni;
+                    this._nombrePaciente = nombrePaciente;
+                    this._enfermedad = enfermedad;
+                }
+
+                get GetNombrePaciente()
+                {
+                    return this._nombrePaciente;
+                }
+
+            }
+
+            function eliminarPaciente(listaPacientes)
+            {
+                    removeItemFromArr(listaPacientes.GetArrayPacientes, lista.listaPacientes.GetArrayPacientes.GetNombrePaciente[1]);
+
+                    document.write(listaPacientes.GetArrayPacientes.GetNombrePaciente[1]);
+            }
+
+            let hospi = new hospital("Rabano", "random", 5);
+
+            eliminarPaciente(hospi);
+
+        </script>
+    </body>
+</html>

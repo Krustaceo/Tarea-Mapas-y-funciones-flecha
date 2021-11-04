@@ -1,0 +1,24 @@
+Ejercicios básicos funciones flecha y map
+
+* CREAR en GIT y enviarme enlace **
+
+1. Definir una función de flecha que reciba un valor entero y retorne otro valor entero aleatorio 
+comprendido entre 1 y el valor que llega como parámetro. Asignar dicha función de flecha a una 
+constante para permitir llamarla en sucesivas ocasiones.
+
+2. Crear una calculadora con funciones flecha y las operaciones básicas (+ , * , - , / ). Utilizar dos 
+parámetros de entrada y 4 botones. 
+
+3.Almacenar en un Map los nombres de ciudades como clave y la cantidad de habitantes como 
+valores. Mostrar en una lista HTML que se debe crear en forma dinámica inmediatamente luego que
+se carga la página.
+
+Se debe implementar estas opciones
+
+1. El usuario puede ver todas las ciudades y sus habitantes
+2. El usuario puede saber cuantas ciudades existen
+3. Borrar ciudad
+4. Añadir ciudad y habitantes
+5. Si el usuario solicita saber la ciudad de mas habitantes que se muestre en un color  rojo el tipo de 
+letra
+6. Si el usuario solicita la ciudad de menos habitantes que se muestre en color verde
