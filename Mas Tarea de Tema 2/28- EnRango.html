@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <script>
+            /*
+            Escriba un programa JavaScript para verificar si dos valores enteros dados están
+            en el rango 50..99 (inclusive). Devuelve verdadero si alguno de ellos está en dicho
+            rango
+            */
+
+            function verificar(num1, num2)
+            {
+                var verificado = new Boolean(false);
+
+                for(let contador = 50; contador < 100; contador++)
+                {
+                    if(num1 == contador || num2 == contador)
+                    {
+                        alert("Verdadero");
+                        verificado = true;
+                        break;
+                    }
+                }
+                if(verificado == false)
+                {
+                    alert("No entra en rango");
+                }
+            }
+
+            var numero1 = parseInt(prompt("Introduce un numero: "));
+
+            var numero2 = parseInt(prompt("Introduce un numero: "));
+
+            verificar(numero1, numero2);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            
+            function ObtenerExtension(ruta)
+            {
+                // Cualquier ruta de archivo
+                var filepath = ruta;
+
+                // Usar la expresion regular para reemplazar el contenido extra con un espacio en blanco
+                var filenameWithExtension = filepath.replace(/^.*[\\\/]/, '');
+
+                // Expone nombre-archivo.png
+                alert(filenameWithExtension);
+            }
+
+            var rut = prompt("Introduce la ruta de un archivo: ");
+
+            ObtenerExtension(rut);
+
+        </script>
+    </body>
+</html>

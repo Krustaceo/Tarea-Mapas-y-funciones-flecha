@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <script>
+            /*
+            Escriba un programa JavaScript para calcular la diferencia absoluta entre un
+            número especificado y 19. Devuelve el triple de su diferencia absoluta si el número
+            especificado es mayor que 19.
+            */
+
+            var diecinueve = parseInt(19);
+
+            var numero = parseInt(prompt("Introduce un numero: "));
+
+            var dif;
+
+            if(numero > diecinueve)
+            {
+                dif = numero - diecinueve;
+
+                alert(dif * 3);
+            }
+            else
+            {
+                dif = diecinueve - numero;
+                
+                alert(dif);
+            }
+
+            
+        </script>
+    </body>
+</html>
